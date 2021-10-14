@@ -6,6 +6,7 @@
 :root {
   --white: #fff;
   --gray: #616161;
+  --gray-dark: #444649;
   --primary: #00c6ff;
   --primary-dark: #02b9ec;
   --primary-darker: #02b0e0;
@@ -147,6 +148,12 @@
   }
 }
 
+@keyframes rotate90Deg {
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -170,6 +177,9 @@ body {
 
 /** START WRITING YOUR CODE BELOW  **/
 
+/**
+*   HOME SECTION
+**/
 .full-section {
   min-height: 100vh;
 }
@@ -186,6 +196,18 @@ body {
 
 #foreground {
   z-index: 1;
+  padding-top: 40vh;
+}
+
+.full-section h1,
+.full-section h2 {
+  margin: 0px;
+  font-size: 32pt;
+  line-height: 48px;
+}
+
+.bold {
+  font-weight: 900;
 }
 
 .primary-text-color {
@@ -193,9 +215,73 @@ body {
 }
 
 .big-button {
-  font-size: 13pt;
+  font-size: 22px;
+  font-family: "Raleway", sans-serif;
+
   border: 2px solid var(--white);
   background: none;
   color: var(--white);
-  padding: 20px 40px;
+
+  margin-top: 20px;
+  padding: 12px 20px;
+}
+
+.big-button:hover {
+  border: 2px solid var(--primary-darker);
+  background: var(--primary-darker);
+}
+
+.big-button:hover i {
+  animation: rotate90Deg 0.2s forwards;
+}
+
+.big-button i {
+  margin-left: 7px;
+  position: relative;
+  top: 2px;
+}
+
+/**
+*   ABOUT SECTION
+**/
+#about {
+  background: var(--white);
+  color: var(--gray);
+}
+
+#about h2 {
+  font-weight: 900;
+  font-family: "raleway-bold";
+  text-transform: uppercase;
+  color: var(--gray-dark);
+}
+
+#about hr {
+  width: 70px;
+  border-bottom: 3px solid var(--gray-dark);
+  margin-top: 8px;
+}
+
+.hexagon-container .hexagon {
+  font-size: 54px;
+
+  width: 90px;
+  height: 90px;
+
+  margin: 0 auto;
+  padding-top: 4px;
+
+  border-radius: 100%;
+  background: var(--primary-darker);
+  color: var(--white);
+}
+
+.hexagon-container h5 {
+  font-size: 24px;
+  font-family: "raleway-bold";
+}
+
+.hexagon-container p {
+  font-size: 16px;
+  font-weight: 500;
 }
