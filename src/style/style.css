@@ -285,3 +285,97 @@ body {
   font-size: 16px;
   font-weight: 500;
 }
+
+#bars-container .bar {
+  position: relative;
+  width: 100%;
+  height: 28px;
+  background: #eee;
+  margin-top: 15px;
+}
+
+.bar .fill {
+  position: absolute;
+  height: 28px;
+  background: var(--primary-dark);
+}
+
+.bar .tag {
+  width: 100px;
+  height: 100%;
+  background: var(--primary);
+
+  font-size: 15px;
+  font-weight: 900;
+  font-family: "Raleway-bold";
+  color: var(--white);
+  padding-top: 3px;
+}
+
+.bar span {
+  float: right;
+  font-size: 15px;
+  margin: 2px 7px 0px 0px;
+}
+
+#bars-container:not(.animated) .bar .fill {
+  width: 0px;
+}
+
+#bars-container .bar .fill {
+  transition: 1.1s 0.2s width ease-in-out;
+}
+
+#css {
+  width: 90%;
+}
+
+#html {
+  width: 90%;
+}
+
+#javascript {
+  width: 75%;
+}
+
+#react {
+  width: 75%;
+}
+
+#redux {
+  width: 75%;
+}
+
+#node-js {
+  width: 70%;
+}
+
+#express {
+  width: 70%;
+}
+
+#mongoDB {
+  width: 70%;
+}
+
+#rest-api {
+  width: 70%;
+}
+
+#npm {
+  width: 60%;
+}
+
+#git {
+  width: 60%;
+}
+
+#about-me h4 {
+  font-size: 22px;
+  font-weight: 900;
+  font-family: "Raleway-bold";
+}
+
+#about-me p {
+  font-size: 16px;
+}
